@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #121316; }
+  * { box-sizing: border-box; }
+  a { color: #e9e6e0; text-decoration: none; }
+  a:hover { color: #ffffff; }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #121316; color: #e9e6e0; font-family: 'IBM Plex Sans', Helvetica, sans-serif; padding: clamp(28px, 5vw, 76px) clamp(20px, 5vw, 76px) clamp(48px, 6vw, 96px);">
+<div style="max-width: 1180px; margin: 0 auto;">
+
+  <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2e33; padding-bottom: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8f8a82;">Daniel Park &middot; Personal site</div>
+    <a href="Daniel%20Park%20Portfolio.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8f8a82;" style-hover="color: #ffffff; text-decoration: underline;">See all five side by side &rarr;</a>
+  </div>
+
+  <h1 style="margin: clamp(36px, 6vw, 72px) 0 0; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.04; font-weight: 600; letter-spacing: -0.035em; max-width: 20ch; text-wrap: pretty;">Five directions, five working sites.</h1>
+  <p style="margin: 24px 0 0; max-width: 62ch; font-size: 17px; line-height: 1.66; color: #a8a49d; text-wrap: pretty;">Each one is the same content: the same bio, the same activities, the same honors. Only the design language changes. Open them, scroll them, and pick the one that sounds like Daniel. Every photo box is drag and drop, so you can put real pictures in before deciding.</p>
+
+  <div style="display: flex; flex-direction: column; gap: 18px; margin-top: clamp(40px, 5vw, 64px);">
+
+    <a href="Site-A-Editorial-Record.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+      <div style="max-width: 260px;">
+        <div style="height: 128px; background: #f7f5f0; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
+          <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 27px; color: #1a1a18; letter-spacing: -0.02em;">Daniel Park</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #2f4a7a; margin-top: 7px;">01 &mdash; Statement</div>
+          <div style="height: 1px; background: #ddd8cd; margin-top: 10px;"></div>
+        </div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; background: #e9e6e0; color: #101010; padding: 3px 9px;">A</span>
+          <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Editorial Record</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Serif type on warm paper, sections numbered 01 to 08, hairline rules, every date in a right-hand column. Reads like a printed academic dossier rather than a website.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most serious</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Print feel</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Quietest</span>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 14px; font-size: 14px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Best if he wants to be read carefully. Weakest first impression of the five, because it does not shout.</div>
+        </sc-if>
+      </div>
+    </a>
+
+    <a href="Site-B-Instrument-Panel.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+      <div style="max-width: 260px;">
+        <div style="height: 128px; background: #14171a; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
+          <div style="font-size: 26px; font-weight: 600; color: #e8eaec; letter-spacing: -0.035em;">Daniel Park</div>
+          <div style="display: flex; gap: 7px; margin-top: 11px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #e8a33d; color: #e8a33d; padding: 4px 7px;">2nd place</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #3a3f45; color: #9aa3ac; padding: 4px 7px;">1 hr / week</span>
+          </div>
+        </div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; background: #e9e6e0; color: #101010; padding: 3px 9px;">B</span>
+          <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Instrument Panel</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Dark charcoal, bordered modules, monospace labels, and a spec row under the name. Amber marks every award. Looks like something an engineer built for himself.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most on-message</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Dense</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Dark</span>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 14px; font-size: 14px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Says engineer in one second. Risk is that dark technical sites can read as a startup landing page rather than a student.</div>
+        </sc-if>
+      </div>
+    </a>
+
+    <a href="Site-C-Swiss-Grid.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+      <div style="max-width: 260px;">
+        <div style="height: 128px; background: #ffffff; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
+          <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 700; color: #0a0a0a; letter-spacing: -0.055em; line-height: 0.9;">Daniel<br>Park</div>
+          <div style="width: 34px; height: 5px; background: #d63a1e; margin-top: 11px;"></div>
+        </div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; background: #e9e6e0; color: #101010; padding: 3px 9px;">C</span>
+          <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Swiss Grid</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Helvetica at enormous scale, deep whitespace, one vermillion accent, and a full-width photo band under the name. The most contemporary and the most confident.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most memorable</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Bold</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Photo-dependent</span>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 14px; font-size: 14px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Strongest visual impact, but it only works with one genuinely good wide photograph. Without that the hero band goes flat.</div>
+        </sc-if>
+      </div>
+    </a>
+
+    <a href="Site-D-Academic-Homepage.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+      <div style="max-width: 260px;">
+        <div style="height: 128px; background: #f6f7f9; display: flex; gap: 12px; align-items: center; padding: 0 18px; border: 1px solid #2c2e33;">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: #dfe3ea; flex: none;"></div>
+          <div style="min-width: 0;">
+            <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; font-weight: 600; color: #16181d; letter-spacing: -0.02em;">Daniel Park</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px;">
+              <span style="font-size: 8px; background: #eef3fa; color: #1f5fa8; padding: 4px 7px; border-radius: 999px;">Mech Eng</span>
+              <span style="font-size: 8px; background: #eef3fa; color: #1f5fa8; padding: 4px 7px; border-radius: 999px;">Applied AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; background: #e9e6e0; color: #101010; padding: 3px 9px;">D</span>
+          <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Academic Homepage</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Light cards, a sidebar portrait with focus-area chips and Email and Resume buttons, and a dated News feed where each award reads as an announcement. The convention scholars and admissions readers already know how to scan.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Easiest to scan</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Familiar</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Grows well</span>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 14px; font-size: 14px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Safest choice and the easiest to keep updated over two more years. Also the least distinctive, since thousands of academic sites look like this.</div>
+        </sc-if>
+      </div>
+    </a>
+
+    <a href="Site-E-Research-Lab.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+      <div style="max-width: 260px;">
+        <div style="height: 128px; background: #101317; position: relative; overflow: hidden; border: 1px solid #2c2e33;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #2a3138 0%, #101317 100%);"></div>
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 14px 16px;">
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; color: #ffffff; letter-spacing: -0.04em; line-height: 1.04;">mechanical engineering,<br>with ai inside</div>
+            <div style="width: 7px; height: 7px; background: #4fbfa8; margin-top: 10px;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; background: #e9e6e0; color: #101010; padding: 3px 9px;">E</span>
+          <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Research Lab</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">A full-bleed hero photograph, lowercase voice, three key-area cards, then a selected-record feed with thumbnails and dates. It frames him as a practice with a direction rather than a list of activities.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most ambitious</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Image-led</span>
+          <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Third person</span>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 14px; font-size: 14px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Makes a sixteen year old look like a research programme, which is either exactly right or slightly too much. Needs seven or more real photographs to work.</div>
+        </sc-if>
+      </div>
+    </a>
+
+  </div>
+
+  <div style="margin-top: clamp(44px, 5vw, 72px); padding-top: 24px; border-top: 1px solid #2c2e33; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8f8a82; margin-bottom: 10px;">Still placeholder</div>
+      <div style="font-size: 15px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">The email address, the resume PDF and every photograph. All five sites share the same photo boxes, so a picture dropped into one appears in the others.</div>
+    </div>
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8f8a82; margin-bottom: 10px;">Written by me</div>
+      <div style="font-size: 15px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">The bio, the reasoning about AI and domain expertise, and the descriptions of each activity. Read them and change anything that does not sound like him.</div>
+    </div>
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8f8a82; margin-bottom: 10px;">Mix and match</div>
+      <div style="font-size: 15px; line-height: 1.6; color: #7d7a74; text-wrap: pretty;">Any part of one can move into another. D's news feed inside C's layout, or E in first person, are both small changes.</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>

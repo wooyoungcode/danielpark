@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #e5e3df; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #2f4a7a; }
+</style>
+</helmet>
+
+<div style="padding: 72px 80px 160px; font-family: 'IBM Plex Mono', monospace;">
+
+<section style="display: flex; flex-direction: column; gap: 40px; margin-bottom: 120px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid #c9c6c0; padding-bottom: 16px;">
+    <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6862;">Turn 2</div>
+    <div style="font-size: 13px; color: #97938c;">Two more, modelled on the references: an academic personal homepage and a research-lab site.</div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start;">
+
+    <sc-if value="{{ show1d }}" hint-placeholder-val="{{ true }}">
+    <div id="1d" style="width: 1080px; flex: 0 0 1080px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.1em; background: #1a1a18; color: #f7f5f0; padding: 5px 10px;">1d</div>
+        <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6862;">Academic Homepage</div>
+        <div style="font-size: 12px; color: #97938c;">Cards, sidebar profile, a dated news feed. The scholar-site convention, which admissions readers already know how to scan.</div>
+      </div>
+
+      <div style="background: #f6f7f9; color: #16181d; font-family: 'IBM Plex Sans', Helvetica, sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 24px 60px -20px rgba(0,0,0,0.18);">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 44px; background: #ffffff; border-bottom: 1px solid #e3e6ea;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 30px; height: 30px; background: #1f5fa8; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; letter-spacing: 0.02em;">FP</div>
+            <div style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em;">Daniel Park</div>
+          </div>
+          <div style="display: flex; gap: 26px; font-size: 14px; color: #4c5460;">
+            <a href="#1d-about" style-hover="color: #1f5fa8;">About</a>
+            <a href="#1d-news" style-hover="color: #1f5fa8;">News</a>
+            <a href="#1d-activities" style-hover="color: #1f5fa8;">Activities</a>
+            <a href="#1d-honors" style-hover="color: #1f5fa8;">Honors</a>
+            <a href="#1d-contact" style-hover="color: #1f5fa8;">Contact</a>
+          </div>
+        </div>
+
+        <div style="padding: 44px;">
+
+          <div id="1d-about" style="display: grid; grid-template-columns: 268px minmax(0, 1fr); gap: 40px; background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 36px; align-items: start;">
+            <div>
+              <div style="width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background: #edeff3;">
+                <image-slot id="d-portrait" shape="rect" placeholder="Portrait, square"></image-slot>
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 16px;">
+                <a href="mailto:daniel.park@example.com" style="flex: 1; text-align: center; font-size: 13px; font-weight: 500; padding: 10px 0; border: 1px solid #d6dae1; border-radius: 8px; color: #16181d;" style-hover="border-color: #1f5fa8; color: #1f5fa8;">Email</a>
+                <a href="Daniel-Park-Resume.pdf" download style="flex: 1; text-align: center; font-size: 13px; font-weight: 500; padding: 10px 0; border: 1px solid #d6dae1; border-radius: 8px; color: #16181d;" style-hover="border-color: #1f5fa8; color: #1f5fa8;">Resume</a>
+              </div>
+              <div style="margin-top: 26px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #666e7c;">Focus Areas</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px;">
+                <span style="font-size: 12px; padding: 6px 11px; background: #eef3fa; color: #1f5fa8; border-radius: 999px;">Mechanical Engineering</span>
+                <span style="font-size: 12px; padding: 6px 11px; background: #eef3fa; color: #1f5fa8; border-radius: 999px;">Applied AI</span>
+                <span style="font-size: 12px; padding: 6px 11px; background: #eef3fa; color: #1f5fa8; border-radius: 999px;">Mathematics</span>
+                <span style="font-size: 12px; padding: 6px 11px; background: #eef3fa; color: #1f5fa8; border-radius: 999px;">Astronomy</span>
+                <span style="font-size: 12px; padding: 6px 11px; background: #eef3fa; color: #1f5fa8; border-radius: 999px;">Prototyping</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: #666e7c;">Hi.</div>
+              <h1 style="margin: 6px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 46px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.05;">Daniel Park</h1>
+              <div style="margin-top: 8px; font-size: 18px; color: #1f5fa8; font-weight: 500;">Aspiring mechanical engineer, applied AI</div>
+              <div style="margin-top: 22px; font-size: 16px; line-height: 1.68; color: #3c4350;">
+                <p style="margin: 0 0 16px; text-wrap: pretty;">I am a Grade 11 student at <strong style="font-weight: 600; color: #16181d;">Fayston Preparatory School, Suji Campus</strong>, graduating in 2028. I plan to study <strong style="font-weight: 600; color: #16181d;">mechanical engineering</strong> and to build a working command of <em>artificial intelligence</em> alongside it, rather than after it.</p>
+                <p style="margin: 0; text-wrap: pretty;">My reasoning is simple. Within a few years AI will be embedded in nearly every field, and the people who move those fields forward will be the domain experts who know AI well enough to bend it toward a real problem. A physician who can build with a model. An engineer who can put intelligence inside a mechanism instead of next to it.</p>
+              </div>
+              <blockquote style="margin: 24px 0 0; padding: 18px 22px; background: #f6f8fb; border-left: 3px solid #1f5fa8; border-radius: 0 8px 8px 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.5; color: #2b323d; font-style: italic; text-wrap: pretty;">Mechanical engineering is unforgiving in a way I find clarifying. Loads, tolerances and materials do not care what you intended, and that is exactly why I trust it as a foundation.</blockquote>
+            </div>
+          </div>
+
+          <div id="1d-news" style="margin-top: 24px; background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 36px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #666e7c; margin-bottom: 20px;">News</div>
+            <div style="display: flex; flex-direction: column;">
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2026</div><div style="color: #3c4350;">Named <strong style="font-weight: 600; color: #16181d;">Student of the Month</strong> at Fayston Preparatory School.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2026</div><div style="color: #3c4350;"><strong style="font-weight: 600; color: #16181d;">2nd place</strong> at the Fayston Engineering Competition.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2026</div><div style="color: #3c4350;"><strong style="font-weight: 600; color: #16181d;">2nd place</strong> at the Fayston Math Competition, for the second time.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2026</div><div style="color: #3c4350;">Finished <strong style="font-weight: 600; color: #16181d;">2nd at the KISAC tournament</strong> with Varsity Basketball.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2026</div><div style="color: #3c4350;">Joined the church orchestra, playing at the Sunday service each week.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2025</div><div style="color: #3c4350;">Joined the Fayston Engineering Club and the Astronomy Club.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2025</div><div style="color: #3c4350;">Began a full concert season with the Fayston Symphony Orchestra.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid #eef0f3; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2025</div><div style="color: #3c4350;">Named <strong style="font-weight: 600; color: #16181d;">JV Basketball captain</strong>, then team <strong style="font-weight: 600; color: #16181d;">MVP</strong>.</div></div>
+              <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 11px 0; font-size: 15px; line-height: 1.5;"><div style="color: #666e7c; font-variant-numeric: tabular-nums;">2024</div><div style="color: #3c4350;">Began weekly service with Hiking Heroes and joined the Mathematics Club.</div></div>
+            </div>
+          </div>
+
+          <div id="1d-activities" style="margin-top: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px;">
+
+            <div style="background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 34px;">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1f5fa8; margin-bottom: 22px;">Engineering &amp; Mathematics</div>
+              <div style="display: flex; flex-direction: column; gap: 22px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;"><h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Fayston Engineering Club</h3><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Dec 2025 &ndash; present</div></div>
+                  <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Weekly build sessions where a written prompt has to become a working prototype. Sketch, cut, fail, measure why it failed, cut again. Placed 2nd at the Fayston Engineering Competition.</p>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;"><h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Mathematics Club</h3><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Mar 2024 &ndash; Jun 2025</div></div>
+                  <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">A small group working through problems none of us could finish alone. The skill it built was not speed. It was sitting with a problem far longer than is comfortable.</p>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;"><h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Astronomy Club</h3><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Dec 2025 &ndash; present</div></div>
+                  <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Observation nights and the long arithmetic behind them. Orbital mechanics is mechanical engineering at a scale you are never allowed to touch.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 34px;">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1f5fa8; margin-bottom: 22px;">Athletics</div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;"><h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Basketball, Varsity and JV</h3><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Oct 2024 &ndash; present</div></div>
+                <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Three hours a week, every week, for two years. I started on JV, was named captain and then team MVP, and moved up to varsity, where we finished 2nd at the KISAC tournament.</p>
+                <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Captaincy was the part that changed me. Running a huddle for players who are tired and behind on the scoreboard is a different skill from being good at basketball, and it is the one I use most on a build team.</p>
+              </div>
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1f5fa8; margin: 30px 0 22px;">Service</div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;"><h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Hiking Heroes</h3><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Mar 2024 &ndash; Jun 2025</div></div>
+                <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Two hours a week for fifteen months cleaning the campus and its trails, plus a forum on climate change and Silhak, the Korean tradition holding that knowledge is worth only what it changes. That is the closest thing I have found to a description of why I want to be an engineer.</p>
+              </div>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 34px; grid-column: span 2;">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1f5fa8; margin-bottom: 22px;">Music</div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 30px;">
+                <div>
+                  <h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Fayston Symphony Orchestra</h3>
+                  <div style="font-size: 12px; color: #666e7c; margin-top: 4px;">Aug 2025 &ndash; Jun 2026</div>
+                  <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">A full season of rehearsal ending in concert performance. Eighty people, one tempo, no room for a private interpretation.</p>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Church Orchestra</h3>
+                  <div style="font-size: 12px; color: #666e7c; margin-top: 4px;">Feb 2026 &ndash; present</div>
+                  <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Playing for the congregation every Sunday. No audition, no ranking, no award at the end, which is why it matters to me.</p>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Concert Band</h3>
+                  <div style="font-size: 12px; color: #666e7c; margin-top: 4px;">Course Excellence</div>
+                  <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #3c4350; text-wrap: pretty;">Recognised with the Course Excellence award for the year.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="1d-honors" style="margin-top: 24px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px; align-items: start;">
+            <div style="background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 36px;">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #666e7c; margin-bottom: 18px;">Honors</div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #eef0f3;"><div style="font-size: 16px; font-weight: 500;">Student of the Month</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Fayston Preparatory</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #eef0f3;"><div style="font-size: 16px; font-weight: 500;">Fayston Math Competition, 2nd Place</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Awarded twice</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #eef0f3;"><div style="font-size: 16px; font-weight: 500;">Fayston Engineering Competition, 2nd Place</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Engineering Club</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #eef0f3;"><div style="font-size: 16px; font-weight: 500;">KISAC Tournament, 2nd Place</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Varsity Basketball</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #eef0f3;"><div style="font-size: 16px; font-weight: 500;">Junior Varsity MVP and Captain</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Basketball</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0;"><div style="font-size: 16px; font-weight: 500;">Course Excellence, Concert Band</div><div style="font-size: 12px; color: #666e7c; white-space: nowrap;">Academic award</div></div>
+              </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e3e6ea; border-radius: 14px; padding: 32px 36px;">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #666e7c; margin-bottom: 18px;">Gallery</div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px;">
+                <div style="aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #edeff3;"><image-slot id="d-g1" shape="rect" placeholder="Engineering build"></image-slot></div>
+                <div style="aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #edeff3;"><image-slot id="d-g2" shape="rect" placeholder="Varsity game"></image-slot></div>
+                <div style="aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #edeff3;"><image-slot id="d-g3" shape="rect" placeholder="Orchestra"></image-slot></div>
+                <div style="aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; background: #edeff3;"><image-slot id="d-g4" shape="rect" placeholder="Service day"></image-slot></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="1d-contact" style="padding: 26px 44px; background: #ffffff; border-top: 1px solid #e3e6ea; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #666e7c;">
+          <div>&copy; 2026 Daniel Park &middot; Fayston Preparatory School, Suji Campus &middot; <a href="mailto:daniel.park@example.com" style="color: #1f5fa8;" style-hover="text-decoration: underline;">daniel.park@example.com</a></div>
+          <a href="Daniel-Park-Resume.pdf" download style="color: #1f5fa8;" style-hover="text-decoration: underline;">Download resume</a>
+        </div>
+
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ show1e }}" hint-placeholder-val="{{ true }}">
+    <div id="1e" style="width: 1080px; flex: 0 0 1080px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.1em; background: #1a1a18; color: #f7f5f0; padding: 5px 10px;">1e</div>
+        <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6862;">Research Lab</div>
+        <div style="font-size: 12px; color: #97938c;">Full-bleed hero, lowercase voice, focus areas and a selected-record feed. Frames him as a practice, not a resume.</div>
+      </div>
+
+      <div style="background: #ffffff; color: #101317; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 24px 60px -20px rgba(0,0,0,0.18);">
+
+        <div style="position: relative; height: 620px; background: #101317; overflow: hidden;">
+          <div style="position: absolute; inset: 0;">
+            <image-slot id="e-hero" shape="rect" fit="cover" placeholder="Wide hero image: workshop, court, or campus"></image-slot>
+          </div>
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16,19,23,0.82) 0%, rgba(16,19,23,0.42) 42%, rgba(16,19,23,0.86) 100%); pointer-events: none;"></div>
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 26px 56px 56px; pointer-events: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: baseline; gap: 10px; color: #ffffff;">
+                <div style="width: 8px; height: 8px; background: #4fbfa8;"></div>
+                <div style="font-size: 15px; font-weight: 500; letter-spacing: -0.01em;">daniel park</div>
+              </div>
+              <div style="display: flex; gap: 24px; font-size: 13px; color: rgba(255,255,255,0.74); pointer-events: auto;">
+                <a href="#1e-focus" style="color: rgba(255,255,255,0.74);" style-hover="color: #ffffff;">focus</a>
+                <a href="#1e-record" style="color: rgba(255,255,255,0.74);" style-hover="color: #ffffff;">record</a>
+                <a href="#1e-honors" style="color: rgba(255,255,255,0.74);" style-hover="color: #ffffff;">honors</a>
+                <a href="#1e-contact" style="color: rgba(255,255,255,0.74);" style-hover="color: #ffffff;">contact</a>
+              </div>
+            </div>
+            <div>
+              <h1 style="margin: 0; font-size: 88px; line-height: 0.94; font-weight: 500; letter-spacing: -0.045em; color: #ffffff;">mechanical engineering,<br>with ai inside</h1>
+              <p style="margin: 26px 0 0; max-width: 62ch; font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.82); text-wrap: pretty;">Daniel Park is a Grade 11 student at Fayston Preparatory School, Suji Campus, graduating in 2028. He is training to be the engineer who is fluent in AI: mechanical engineering as the foundation, artificial intelligence built in rather than bolted on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="1e-focus" style="padding: 72px 56px 0;">
+          <h2 style="margin: 0 0 26px; font-size: 22px; font-weight: 500; letter-spacing: -0.02em;">key areas</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+
+            <div style="border: 1px solid #e4e6ea; overflow: hidden;">
+              <div style="height: 168px; background: #eef0f3;"><image-slot id="e-a1" shape="rect" placeholder="Build session"></image-slot></div>
+              <div style="padding: 22px 22px 26px;">
+                <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 500; letter-spacing: -0.02em;">engineering &amp; prototyping</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.62; color: #5b6169;">Weekly build sessions; competition prototyping; iteration under deadline; tolerances, materials, and the parts that break.</p>
+                <div style="margin-top: 16px; font-size: 12px; color: #1f6f6a;">Fayston Engineering Club, 2nd place</div>
+              </div>
+            </div>
+
+            <div style="border: 1px solid #e4e6ea; overflow: hidden;">
+              <div style="height: 168px; background: #eef0f3;"><image-slot id="e-a2" shape="rect" placeholder="Whiteboard / problem set"></image-slot></div>
+              <div style="padding: 22px 22px 26px;">
+                <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 500; letter-spacing: -0.02em;">mathematics &amp; modelling</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.62; color: #5b6169;">Competition problem solving; orbital mechanics; sitting with a problem far longer than is comfortable; patience over speed.</p>
+                <div style="margin-top: 16px; font-size: 12px; color: #1f6f6a;">Math Club, Astronomy Club, 2nd place &times; 2</div>
+              </div>
+            </div>
+
+            <div style="border: 1px solid #e4e6ea; overflow: hidden;">
+              <div style="height: 168px; background: #eef0f3;"><image-slot id="e-a3" shape="rect" placeholder="Screen / model output"></image-slot></div>
+              <div style="padding: 22px 22px 26px;">
+                <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 500; letter-spacing: -0.02em;">applied ai</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.62; color: #5b6169;">Domain-first AI; intelligence inside a mechanism rather than next to it; the belief that field experts who know AI will move their fields.</p>
+                <div style="margin-top: 16px; font-size: 12px; color: #1f6f6a;">Intended direction of study</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="1e-record" style="padding: 72px 56px 0;">
+          <h2 style="margin: 0 0 8px; font-size: 22px; font-weight: 500; letter-spacing: -0.02em;">selected record</h2>
+          <div style="border-top: 1px solid #101317;">
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; border-bottom: 1px solid #e8eaed; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r1" shape="rect" placeholder="Prototype"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Fayston Engineering Club</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">Build sessions where a written prompt has to become something that works. Sketch, cut, fail, measure why it failed, cut again. Placed 2nd at the Fayston Engineering Competition against teams from across the school.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>dec 2025 &ndash; present</div><div>1 hr / week</div><div style="color: #1f6f6a;">2nd place</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; border-bottom: 1px solid #e8eaed; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r2" shape="rect" placeholder="Varsity game"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Basketball, Varsity and Junior Varsity</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">Three hours a week, every week, for two years. Started on JV as captain and team MVP, then moved up to varsity and finished 2nd at KISAC. Running a huddle for players who are tired and behind is the skill he uses most on a build team.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>oct 2024 &ndash; present</div><div>3 hr / week</div><div style="color: #1f6f6a;">kisac 2nd, jv captain, jv mvp</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; border-bottom: 1px solid #e8eaed; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r3" shape="rect" placeholder="Problem set"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Mathematics Club</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">A small group working through problems none of them could finish alone. The skill it built was not speed, and it turned into two 2nd place finishes at the Fayston Math Competition.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>mar 2024 &ndash; jun 2025</div><div>1 hr / week</div><div style="color: #1f6f6a;">2nd place &times; 2</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; border-bottom: 1px solid #e8eaed; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r4" shape="rect" placeholder="Concert"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Fayston Symphony Orchestra, and church orchestra</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">A full concert season with the school symphony, and every Sunday service with the church orchestra since February. An orchestra is the clearest system he has been part of: eighty people, one tempo, no room for a private interpretation.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>aug 2025 &ndash; present</div><div>1 hr / week</div><div style="color: #1f6f6a;">concert band excellence</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; border-bottom: 1px solid #e8eaed; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r5" shape="rect" placeholder="Trail cleanup"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Hiking Heroes</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">Two hours a week for fifteen months cleaning the campus and its trails, plus a forum on climate change and Silhak, the Korean tradition holding that knowledge is worth only what it changes. The closest thing he has found to a description of why he wants to be an engineer.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>mar 2024 &ndash; jun 2025</div><div>2 hr / week</div><div style="color: #1f6f6a;">climate &amp; silhak forum</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr) 170px; gap: 28px; padding: 26px 0; align-items: start;">
+              <div style="height: 112px; background: #eef0f3;"><image-slot id="e-r6" shape="rect" placeholder="Night sky"></image-slot></div>
+              <div>
+                <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Astronomy Club</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.58; color: #5b6169; text-wrap: pretty;">Observation nights and the long arithmetic behind them. Orbital mechanics is mechanical engineering at a scale you are never allowed to touch, which makes the modelling the only instrument you get.</p>
+              </div>
+              <div style="font-size: 13px; line-height: 1.9; color: #6b7280; text-align: right;"><div>dec 2025 &ndash; present</div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="1e-honors" style="padding: 72px 56px 0;">
+          <h2 style="margin: 0 0 26px; font-size: 22px; font-weight: 500; letter-spacing: -0.02em;">honors</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2026</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Student of the Month</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Fayston Preparatory School</div></div>
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2026</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Math Competition, 2nd Place</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Fayston, awarded twice</div></div>
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2026</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Engineering Competition, 2nd Place</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Fayston Engineering Club</div></div>
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2026</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">KISAC Tournament, 2nd Place</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Varsity Basketball</div></div>
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2025</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">JV MVP and Captain</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Basketball</div></div>
+            <div style="border: 1px solid #e4e6ea; padding: 22px;"><div style="font-size: 12px; color: #6b7280;">2026</div><div style="margin-top: 8px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Course Excellence</div><div style="margin-top: 6px; font-size: 13px; color: #5b6169;">Concert Band</div></div>
+          </div>
+        </div>
+
+        <div id="1e-contact" style="margin-top: 72px; padding: 44px 56px; background: #101317; color: #ffffff; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: end;">
+          <div>
+            <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.5;">Fayston Preparatory School<br>Suji Campus</div>
+            <div style="display: flex; gap: 22px; margin-top: 22px; font-size: 14px; color: rgba(255,255,255,0.7);">
+              <a href="mailto:daniel.park@example.com" style="color: rgba(255,255,255,0.7);" style-hover="color: #4fbfa8;">daniel.park@example.com</a>
+              <a href="Daniel-Park-Resume.pdf" download style="color: rgba(255,255,255,0.7);" style-hover="color: #4fbfa8;">resume</a>
+            </div>
+          </div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.45); text-align: right;">class of 2028</div>
+        </div>
+
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 40px;">
+  <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid #c9c6c0; padding-bottom: 16px;">
+    <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6862;">Turn 1</div>
+    <div style="font-size: 13px; color: #97938c;">Three directions for Daniel Park's portfolio site. Same content, three different design languages.</div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start;">
+
+    <sc-if value="{{ show1a }}" hint-placeholder-val="{{ true }}">
+    <div id="1a" style="width: 1080px; flex: 0 0 1080px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; background: #1a1a18; color: #f7f5f0; padding: 5px 10px;">1a</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6862;">Editorial Record</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #97938c;">Serif, paper stock, numbered sections. Reads like a well set academic dossier.</div>
+      </div>
+
+      <div style="background: #f7f5f0; color: #1a1a18; font-family: 'Source Serif 4', Georgia, serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 24px 60px -20px rgba(0,0,0,0.18);">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 22px 88px; border-bottom: 1px solid #1a1a18; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;">
+          <div>Daniel Park</div>
+          <div style="display: flex; gap: 28px; color: #5e5b55;">
+            <a href="#1a-statement">Statement</a>
+            <a href="#1a-work">Work</a>
+            <a href="#1a-record">Record</a>
+            <a href="#1a-honors">Honors</a>
+            <a href="#1a-contact">Contact</a>
+          </div>
+        </div>
+
+        <div style="padding: 88px 88px 72px; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: end; border-bottom: 1px solid #ddd8cd;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #2f4a7a; margin-bottom: 28px;">Fayston Preparatory School &middot; Suji Campus &middot; Class of 2028</div>
+            <h1 style="margin: 0; font-size: 78px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em;">Daniel Park</h1>
+            <div style="margin-top: 24px; font-size: 25px; line-height: 1.4; color: #46433d; font-style: italic; max-width: 30ch; text-wrap: pretty;">Mechanical engineering, with artificial intelligence built in rather than bolted on.</div>
+          </div>
+          <div style="width: 320px; aspect-ratio: 3 / 4; background: #ece8e0;">
+            <image-slot id="a-portrait" shape="rect" placeholder="Portrait, 3:4"></image-slot>
+          </div>
+        </div>
+
+        <div id="1a-statement" style="padding: 72px 88px; border-bottom: 1px solid #ddd8cd;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">01<br>Statement</div>
+            <div>
+              <p style="margin: 0 0 26px; font-size: 30px; line-height: 1.32; letter-spacing: -0.01em; max-width: 26ch; text-wrap: pretty;">I want to be the engineer who is fluent in AI.</p>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; font-size: 17px; line-height: 1.62; color: #35322d;">
+                <div>
+                  <p style="margin: 0 0 18px; text-wrap: pretty;">My reasoning is simple. Within a few years AI will be embedded in nearly every field, and the people who actually move those fields forward will not be the ones who only understand AI, or only understand the field. They will be the domain experts who know AI well enough to bend it toward a real problem.</p>
+                  <p style="margin: 0; text-wrap: pretty;">A physician who can build with a model. An engineer who can put intelligence inside a mechanism instead of next to it. That is the person I am training to become.</p>
+                </div>
+                <div>
+                  <p style="margin: 0 0 18px; text-wrap: pretty;">Mechanical engineering is the foundation I trust: loads, tolerances, materials, and a physical world that does not care what you intended. It is unforgiving in a way I find clarifying. AI is the layer I am adding on top of that, deliberately, while the foundation is still being poured.</p>
+                  <p style="margin: 0; text-wrap: pretty;">Everything below is practice for that. The competitions taught me to iterate under a deadline. Basketball taught me to keep showing up. The orchestra taught me that precision is a form of respect.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-work" style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">02<br>Engineering<br>&amp; Math</div>
+            <div style="display: flex; flex-direction: column;">
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding-bottom: 34px; border-bottom: 1px solid #ddd8cd;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Fayston Engineering Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Weekly build sessions where a written prompt has to become a working prototype. Sketch, cut, fail, measure why it failed, cut again. Placed 2nd at the Fayston Engineering Competition against teams from across the school.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div>Dec 2025 &ndash; present</div>
+                  <div>1 hr / week</div>
+                  <div style="color: #2f4a7a;">2nd place, 2026</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding: 34px 0; border-bottom: 1px solid #ddd8cd;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Mathematics Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">A small group that met to work through problems none of us could finish alone. The skill it built was not speed. It was sitting with a problem far longer than is comfortable, which turned into two 2nd place finishes at the Fayston Math Competition.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div>Mar 2024 &ndash; Jun 2025</div>
+                  <div>1 hr / week</div>
+                  <div style="color: #2f4a7a;">2nd place &times; 2</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding: 34px 0 0;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Astronomy Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Observation nights, and the long arithmetic behind them. Orbital mechanics is mechanical engineering at a scale you are never allowed to touch, which makes the modelling the only instrument you have.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div>Dec 2025 &ndash; present</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">03<br>Athletics</div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; border-top: 1px solid #1a1a18; padding-top: 34px;">
+              <div>
+                <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Basketball, Varsity and Junior Varsity</h3>
+                <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Three hours a week, every week, for two years. I started on JV, was named captain and then team MVP, and moved up to varsity, where we finished 2nd at the KISAC tournament.</p>
+                <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Captaincy was the part that changed me. Running a huddle for players who are tired and behind on the scoreboard is a different skill from being good at basketball, and it is the one I use most in a build team.</p>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                <div>Oct 2024 &ndash; present</div>
+                <div>3 hr / week</div>
+                <div style="color: #2f4a7a;">KISAC 2nd place</div>
+                <div style="color: #2f4a7a;">JV captain</div>
+                <div style="color: #2f4a7a;">JV MVP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">04<br>Music</div>
+            <div style="display: flex; flex-direction: column; border-top: 1px solid #1a1a18;">
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding: 34px 0; border-bottom: 1px solid #ddd8cd;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Fayston Symphony Orchestra</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">A full season of rehearsal ending in concert performance. An orchestra is the clearest system I have ever been part of: eighty people, one tempo, no room for a private interpretation.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div>Aug 2025 &ndash; Jun 2026</div>
+                  <div>Concert season</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding: 34px 0; border-bottom: 1px solid #ddd8cd;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Church Orchestra</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Playing for the congregation every Sunday. No audition, no ranking, no award at the end of it. It is the commitment on this page that nobody is keeping score of, which is why it matters to me.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div>Feb 2026 &ndash; present</div>
+                  <div>1 hr / week</div>
+                  <div>Every Sunday</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; padding: 34px 0 0;">
+                <div>
+                  <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Concert Band</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Recognised with the Course Excellence award for the year.</p>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                  <div style="color: #2f4a7a;">Course Excellence</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">05<br>Service</div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 40px; border-top: 1px solid #1a1a18; padding-top: 34px;">
+              <div>
+                <h3 style="margin: 0 0 10px; font-size: 25px; font-weight: 600; letter-spacing: -0.01em;">Hiking Heroes</h3>
+                <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">Two hours a week for fifteen months, mostly cleaning the campus and its surrounding trails. Unglamorous, repetitive, and the reason the phrase "someone should fix that" stopped sounding acceptable to me.</p>
+                <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #35322d; max-width: 62ch; text-wrap: pretty;">The group also took part in a forum on climate change and Silhak, the Korean tradition of practical learning, which holds that knowledge is worth only what it changes. That is the closest thing I have found to a description of why I want to be an engineer.</p>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #6b6862; text-align: right;">
+                <div>Mar 2024 &ndash; Jun 2025</div>
+                <div>2 hr / week</div>
+                <div>Climate &amp; Silhak forum</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-record" style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">06<br>Record</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">
+
+              <div style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; border-top: 1px solid #1a1a18; padding: 26px 0; border-bottom: 1px solid #ddd8cd;">
+                <div><div style="font-size: 15px; font-weight: 500;">Grade 9</div><div style="color: #97938c; margin-top: 4px;">2024.03 &ndash; 2025.06</div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #35322d; line-height: 1.5;">
+                  <div>Hiking Heroes, service and campus cleanup, 2 hr / week</div>
+                  <div>Mathematics Club, 1 hr / week</div>
+                  <div>Basketball JV, captain and MVP, 3 hr / week, from Oct 2024</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 26px 0; border-bottom: 1px solid #ddd8cd;">
+                <div><div style="font-size: 15px; font-weight: 500;">Grade 10</div><div style="color: #97938c; margin-top: 4px;">2025.08 &ndash; 2026.06</div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #35322d; line-height: 1.5;">
+                  <div>Basketball Varsity, KISAC 2nd place</div>
+                  <div>Fayston Symphony Orchestra, concert season</div>
+                  <div>Fayston Engineering Club, competition 2nd place</div>
+                  <div>Astronomy Club</div>
+                  <div>Church Orchestra, weekly service, from Feb 2026</div>
+                  <div>Fayston Math Competition, 2nd place &times; 2</div>
+                  <div>Student of the Month &middot; Concert Band Course Excellence</div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 26px 0 0;">
+                <div><div style="font-size: 15px; font-weight: 500;">Grade 11</div><div style="color: #97938c; margin-top: 4px;">2026.08 &ndash; present</div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #35322d; line-height: 1.5;">
+                  <div>Continuing: Varsity Basketball, Engineering Club, Astronomy Club, Church Orchestra</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-honors" style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">07<br>Honors</div>
+            <div style="display: flex; flex-direction: column; border-top: 1px solid #1a1a18;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #ddd8cd;"><div style="font-size: 20px;">Student of the Month</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Fayston Preparatory School</div></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #ddd8cd;"><div style="font-size: 20px;">Fayston Math Competition, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Awarded twice</div></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #ddd8cd;"><div style="font-size: 20px;">Fayston Engineering Competition, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Engineering Club</div></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #ddd8cd;"><div style="font-size: 20px;">KISAC Tournament, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Varsity Basketball</div></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #ddd8cd;"><div style="font-size: 20px;">Junior Varsity MVP and Captain</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Basketball</div></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0;"><div style="font-size: 20px;">Course Excellence, Concert Band</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6862;">Academic award</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 72px 88px 0;">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 48px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #97938c; padding-top: 8px;">08<br>Gallery</div>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #1a1a18; padding-top: 34px;">
+              <div style="aspect-ratio: 4 / 5; background: #ece8e0;"><image-slot id="a-g1" shape="rect" placeholder="Engineering build"></image-slot></div>
+              <div style="aspect-ratio: 4 / 5; background: #ece8e0;"><image-slot id="a-g2" shape="rect" placeholder="Varsity game"></image-slot></div>
+              <div style="aspect-ratio: 4 / 5; background: #ece8e0;"><image-slot id="a-g3" shape="rect" placeholder="Orchestra concert"></image-slot></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-contact" style="margin-top: 88px; padding: 56px 88px; background: #1a1a18; color: #f7f5f0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #8c8880; margin-bottom: 14px;">Contact</div>
+            <div style="font-size: 30px; letter-spacing: -0.01em;">daniel.park@example.com</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8c8880; margin-top: 12px;">Fayston Preparatory School, Suji Campus &middot; Class of 2028</div>
+          </div>
+          <a href="Daniel-Park-Resume.pdf" download style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #6b6862; padding: 16px 26px; color: #f7f5f0; white-space: nowrap;" style-hover="background: #f7f5f0; color: #1a1a18; border-color: #f7f5f0;">Download resume &darr;</a>
+        </div>
+
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ show1b }}" hint-placeholder-val="{{ true }}">
+    <div id="1b" style="width: 1080px; flex: 0 0 1080px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; background: #1a1a18; color: #f7f5f0; padding: 5px 10px;">1b</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6862;">Instrument Panel</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #97938c;">Dark, technical, modular. Reads like a spec sheet for an engineer.</div>
+      </div>
+
+      <div style="background: #14171a; color: #e8eaec; font-family: 'IBM Plex Sans', Helvetica, sans-serif; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.4);">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 72px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;">
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <div style="width: 7px; height: 7px; background: #e8a33d;"></div>
+            <span style="color: #e8eaec;">Daniel Park</span>
+            <span>/ Mech E + AI</span>
+          </div>
+          <div style="display: flex; gap: 26px;">
+            <a href="#1b-brief" style-hover="color: #e8a33d;">Brief</a>
+            <a href="#1b-systems" style-hover="color: #e8a33d;">Systems</a>
+            <a href="#1b-log" style-hover="color: #e8a33d;">Log</a>
+            <a href="#1b-honors" style-hover="color: #e8a33d;">Honors</a>
+            <a href="#1b-contact" style-hover="color: #e8a33d;">Contact</a>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 340px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <div style="padding: 76px 56px 56px 72px; border-right: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8a33d; margin-bottom: 30px;">Fayston Preparatory &middot; Suji Campus</div>
+            <h1 style="margin: 0; font-size: 82px; line-height: 0.94; font-weight: 600; letter-spacing: -0.035em;">Daniel<br>Park</h1>
+            <div style="margin-top: 30px; font-size: 22px; line-height: 1.45; color: #b3bac1; max-width: 34ch; font-weight: 400; text-wrap: pretty;">Mechanical engineering with artificial intelligence built in rather than bolted on.</div>
+          </div>
+          <div style="padding: 20px;">
+            <div style="width: 100%; aspect-ratio: 3 / 4; background: #1b1f23; border: 1px solid rgba(255,255,255,0.1);">
+              <image-slot id="b-portrait" shape="rect" placeholder="Portrait, 3:4"></image-slot>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace;">
+          <div style="padding: 22px 24px 22px 72px; border-right: 1px solid rgba(255,255,255,0.1);"><div style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac;">Class of</div><div style="font-size: 17px; margin-top: 7px;">2028</div></div>
+          <div style="padding: 22px 24px; border-right: 1px solid rgba(255,255,255,0.1);"><div style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac;">Intended major</div><div style="font-size: 17px; margin-top: 7px;">Mechanical Eng.</div></div>
+          <div style="padding: 22px 24px; border-right: 1px solid rgba(255,255,255,0.1);"><div style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac;">Second focus</div><div style="font-size: 17px; margin-top: 7px;">Applied AI</div></div>
+          <div style="padding: 22px 72px 22px 24px;"><div style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac;">Status</div><div style="font-size: 17px; margin-top: 7px; color: #e8a33d;">Grade 11, active</div></div>
+        </div>
+
+        <div id="1b-brief" style="padding: 64px 72px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 34px;">01 / Brief</div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); gap: 48px;">
+            <div style="border-left: 2px solid #e8a33d; padding-left: 26px;">
+              <p style="margin: 0; font-size: 27px; line-height: 1.28; font-weight: 500; letter-spacing: -0.02em; text-wrap: pretty;">I want to be the engineer who is fluent in AI.</p>
+            </div>
+            <div style="font-size: 16px; line-height: 1.66; color: #b3bac1;">
+              <p style="margin: 0 0 16px; text-wrap: pretty;">Within a few years AI will be embedded in nearly every field, and the people who move those fields forward will not be the ones who only understand AI, or only understand the field. They will be the domain experts who know AI well enough to bend it toward a real problem.</p>
+              <p style="margin: 0; text-wrap: pretty;">A physician who can build with a model. An engineer who can put intelligence inside a mechanism instead of next to it.</p>
+            </div>
+            <div style="font-size: 16px; line-height: 1.66; color: #b3bac1;">
+              <p style="margin: 0 0 16px; text-wrap: pretty;">Mechanical engineering is the foundation I trust: loads, tolerances, materials, and a physical world that does not care what you intended. It is unforgiving in a way I find clarifying.</p>
+              <p style="margin: 0; text-wrap: pretty;">Everything below is practice. Competitions taught me to iterate under a deadline, basketball taught me to keep showing up, and the orchestra taught me that precision is a form of respect.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="1b-systems" style="padding: 64px 72px 0;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 26px;">02 / Engineering &amp; Mathematics</div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px;">
+
+            <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Engineering Club</span><span>Dec 2025 &ndash; present</span></div>
+              <div style="padding: 26px 20px 22px;">
+                <h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;">Prompt to prototype, weekly</h3>
+                <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">Build sessions where a written prompt has to become something that works. Sketch, cut, fail, measure why it failed, cut again. Placed 2nd at the Fayston Engineering Competition.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+                  <span style="border: 1px solid #e8a33d; color: #e8a33d; padding: 5px 9px;">2nd place</span>
+                  <span style="border: 1px solid rgba(255,255,255,0.16); color: #8d969e; padding: 5px 9px;">1 hr / week</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Mathematics Club</span><span>Mar 2024 &ndash; Jun 2025</span></div>
+              <div style="padding: 26px 20px 22px;">
+                <h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;">Problems nobody finishes alone</h3>
+                <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">The skill it built was not speed. It was sitting with a problem far longer than is comfortable, which turned into two 2nd place finishes at the Fayston Math Competition.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+                  <span style="border: 1px solid #e8a33d; color: #e8a33d; padding: 5px 9px;">2nd place &times; 2</span>
+                  <span style="border: 1px solid rgba(255,255,255,0.16); color: #8d969e; padding: 5px 9px;">1 hr / week</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Astronomy Club</span><span>Dec 2025 &ndash; present</span></div>
+              <div style="padding: 26px 20px 22px;">
+                <h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;">Mechanics you cannot touch</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">Observation nights and the long arithmetic behind them. Orbital mechanics is mechanical engineering at a scale where modelling is the only instrument you get.</p>
+              </div>
+            </div>
+
+            <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Service</span><span>Mar 2024 &ndash; Jun 2025</span></div>
+              <div style="padding: 26px 20px 22px;">
+                <h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;">Hiking Heroes</h3>
+                <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">Two hours a week for fifteen months cleaning the campus and its trails, plus a forum on climate change and Silhak, the Korean tradition holding that knowledge is worth only what it changes. That is the closest thing I have found to a description of why I want to be an engineer.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+                  <span style="border: 1px solid rgba(255,255,255,0.16); color: #8d969e; padding: 5px 9px;">2 hr / week</span>
+                  <span style="border: 1px solid rgba(255,255,255,0.16); color: #8d969e; padding: 5px 9px;">Climate &amp; Silhak forum</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="padding: 64px 72px 0;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 26px;">03 / Athletics &amp; Music</div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 20px;">
+
+            <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Basketball, Varsity and JV</span><span>Oct 2024 &ndash; present</span></div>
+              <div style="padding: 26px 24px 24px;">
+                <h3 style="margin: 0 0 12px; font-size: 24px; font-weight: 600; letter-spacing: -0.02em;">Three hours a week, every week, two years</h3>
+                <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">I started on JV, was named captain and then team MVP, and moved up to varsity, where we finished 2nd at the KISAC tournament.</p>
+                <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.62; color: #b3bac1; text-wrap: pretty;">Captaincy was the part that changed me. Running a huddle for players who are tired and behind on the scoreboard is a different skill from being good at basketball, and it is the one I use most on a build team.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+                  <span style="border: 1px solid #e8a33d; color: #e8a33d; padding: 5px 9px;">KISAC 2nd place</span>
+                  <span style="border: 1px solid #e8a33d; color: #e8a33d; padding: 5px 9px;">JV captain</span>
+                  <span style="border: 1px solid #e8a33d; color: #e8a33d; padding: 5px 9px;">JV MVP</span>
+                  <span style="border: 1px solid rgba(255,255,255,0.16); color: #8d969e; padding: 5px 9px;">3 hr / week</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; flex: 1;">
+                <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Fayston Symphony</span><span>2025.08 &ndash; 2026.06</span></div>
+                <div style="padding: 22px 20px;">
+                  <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -0.015em;">A full concert season</h3>
+                  <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #b3bac1; text-wrap: pretty;">An orchestra is the clearest system I have been part of: eighty people, one tempo, no room for a private interpretation.</p>
+                </div>
+              </div>
+              <div style="border: 1px solid rgba(255,255,255,0.1); background: #1b1f23; flex: 1;">
+                <div style="display: flex; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d969e;"><span>Church Orchestra</span><span>Feb 2026 &ndash; present</span></div>
+                <div style="padding: 22px 20px;">
+                  <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -0.015em;">Every Sunday</h3>
+                  <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #b3bac1; text-wrap: pretty;">No audition, no ranking, no award at the end. It is the commitment on this page nobody keeps score of, which is why it matters to me.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="1b-log" style="padding: 64px 72px 0;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 26px;">04 / Log</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.14);">
+
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <div><div style="font-size: 15px; color: #e8a33d;">Grade 9</div><div style="color: #9aa3ac; margin-top: 5px;">2024.03 &ndash; 2025.06</div></div>
+              <div style="display: flex; flex-direction: column; gap: 7px; color: #b3bac1; line-height: 1.5;">
+                <div>Hiking Heroes, service and campus cleanup, 2 hr / week</div>
+                <div>Mathematics Club, 1 hr / week</div>
+                <div>Basketball JV, captain and MVP, 3 hr / week, from Oct 2024</div>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <div><div style="font-size: 15px; color: #e8a33d;">Grade 10</div><div style="color: #9aa3ac; margin-top: 5px;">2025.08 &ndash; 2026.06</div></div>
+              <div style="display: flex; flex-direction: column; gap: 7px; color: #b3bac1; line-height: 1.5;">
+                <div>Basketball Varsity, KISAC 2nd place</div>
+                <div>Fayston Symphony Orchestra, concert season</div>
+                <div>Fayston Engineering Club, competition 2nd place</div>
+                <div>Astronomy Club</div>
+                <div>Church Orchestra, weekly service, from Feb 2026</div>
+                <div>Fayston Math Competition, 2nd place &times; 2</div>
+                <div>Student of the Month &middot; Concert Band Course Excellence</div>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 24px 0;">
+              <div><div style="font-size: 15px; color: #e8a33d;">Grade 11</div><div style="color: #9aa3ac; margin-top: 5px;">2026.08 &ndash; present</div></div>
+              <div style="display: flex; flex-direction: column; gap: 7px; color: #b3bac1; line-height: 1.5;">
+                <div>Continuing: Varsity Basketball, Engineering Club, Astronomy Club, Church Orchestra</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="1b-honors" style="padding: 64px 72px 0;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 26px;">05 / Honors</div>
+          <div style="border: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 15px 24px; background: #1b1f23; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #9aa3ac;"><div>Award</div><div>Context</div><div>Year</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: baseline;"><div style="font-size: 17px;">Student of the Month</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Fayston Preparatory</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2026</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: baseline;"><div style="font-size: 17px;">Fayston Math Competition, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Awarded twice</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2026</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: baseline;"><div style="font-size: 17px;">Fayston Engineering Competition, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Engineering Club</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2026</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: baseline;"><div style="font-size: 17px;">KISAC Tournament, 2nd Place</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Varsity Basketball</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2026</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: baseline;"><div style="font-size: 17px;">Junior Varsity MVP and Captain</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Basketball</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2025</div></div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 260px 150px; gap: 20px; padding: 17px 24px; align-items: baseline;"><div style="font-size: 17px;">Course Excellence, Concert Band</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">Academic award</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8d969e;">2026</div></div>
+          </div>
+        </div>
+
+        <div style="padding: 64px 72px 0;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 26px;">06 / Gallery</div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+            <div style="aspect-ratio: 4 / 5; background: #1b1f23; border: 1px solid rgba(255,255,255,0.1);"><image-slot id="b-g1" shape="rect" placeholder="Engineering build"></image-slot></div>
+            <div style="aspect-ratio: 4 / 5; background: #1b1f23; border: 1px solid rgba(255,255,255,0.1);"><image-slot id="b-g2" shape="rect" placeholder="Varsity game"></image-slot></div>
+            <div style="aspect-ratio: 4 / 5; background: #1b1f23; border: 1px solid rgba(255,255,255,0.1);"><image-slot id="b-g3" shape="rect" placeholder="Orchestra concert"></image-slot></div>
+          </div>
+        </div>
+
+        <div id="1b-contact" style="margin-top: 72px; padding: 52px 72px; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #9aa3ac; margin-bottom: 14px;">Contact</div>
+            <div style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em;">daniel.park@example.com</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9aa3ac; margin-top: 12px;">Fayston Preparatory School, Suji Campus &middot; Class of 2028</div>
+          </div>
+          <a href="Daniel-Park-Resume.pdf" download style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: #e8a33d; color: #14171a; padding: 17px 28px; white-space: nowrap; font-weight: 500;" style-hover="background: #f2b962;">Download resume &darr;</a>
+        </div>
+
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ show1c }}" hint-placeholder-val="{{ true }}">
+    <div id="1c" style="width: 1080px; flex: 0 0 1080px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; background: #1a1a18; color: #f7f5f0; padding: 5px 10px;">1c</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6862;">Swiss Grid</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #97938c;">White space, Helvetica, one hot accent. Reads like a contemporary design portfolio.</div>
+      </div>
+
+      <div style="background: #ffffff; color: #0a0a0a; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 24px 60px -20px rgba(0,0,0,0.18);">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; border-bottom: 1px solid #0a0a0a; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;">
+          <div>Daniel Park</div>
+          <div style="display: flex; gap: 30px;">
+            <a href="#1c-about" style-hover="color: #d63a1e;">About</a>
+            <a href="#1c-stem" style-hover="color: #d63a1e;">STEM</a>
+            <a href="#1c-life" style-hover="color: #d63a1e;">Athletics &amp; Music</a>
+            <a href="#1c-honors" style-hover="color: #d63a1e;">Honors</a>
+            <a href="#1c-contact" style-hover="color: #d63a1e;">Contact</a>
+          </div>
+        </div>
+
+        <div style="padding: 80px 80px 56px;">
+          <h1 style="margin: 0; font-size: 152px; line-height: 0.86; font-weight: 700; letter-spacing: -0.055em;">Daniel<br>Park</h1>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 60px; margin-top: 56px; align-items: start;">
+            <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; line-height: 2; color: #6e6e6e;">
+              <div style="color: #0a0a0a;">Fayston Preparatory School</div>
+              <div>Suji Campus</div>
+              <div>Class of 2028</div>
+              <div style="color: #d63a1e; margin-top: 14px;">Mechanical Engineering &amp; Applied AI</div>
+            </div>
+            <div style="font-size: 36px; line-height: 1.24; font-weight: 500; letter-spacing: -0.028em; text-wrap: pretty;">Mechanical engineering, with artificial intelligence built in rather than bolted on.</div>
+          </div>
+        </div>
+
+        <div style="width: 100%; height: 460px; background: #f2f2f2;">
+          <image-slot id="c-portrait" shape="rect" fit="cover" placeholder="Wide portrait or workshop photo, 21:9"></image-slot>
+        </div>
+
+        <div id="1c-about" style="padding: 88px 80px 0;">
+          <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 60px;">
+            <div>
+              <div style="font-size: 82px; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; color: #e6e6e6;">01</div>
+              <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 18px;">About</div>
+            </div>
+            <div>
+              <p style="margin: 0 0 40px; font-size: 44px; line-height: 1.12; font-weight: 500; letter-spacing: -0.035em; max-width: 24ch; text-wrap: pretty;">I want to be the engineer who is fluent in AI.</p>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; font-size: 17px; line-height: 1.6; color: #333333;">
+                <div>
+                  <p style="margin: 0 0 18px; text-wrap: pretty;">My reasoning is simple. Within a few years AI will be embedded in nearly every field, and the people who actually move those fields forward will not be the ones who only understand AI, or only understand the field. They will be the domain experts who know AI well enough to bend it toward a real problem.</p>
+                  <p style="margin: 0; text-wrap: pretty;">A physician who can build with a model. An engineer who can put intelligence inside a mechanism instead of next to it. That is the person I am training to become.</p>
+                </div>
+                <div>
+                  <p style="margin: 0 0 18px; text-wrap: pretty;">Mechanical engineering is the foundation I trust: loads, tolerances, materials, and a physical world that does not care what you intended. It is unforgiving in a way I find clarifying. AI is the layer I am adding on top, deliberately, while the foundation is still being poured.</p>
+                  <p style="margin: 0; text-wrap: pretty;">Everything below is practice for that. The competitions taught me to iterate under a deadline. Basketball taught me to keep showing up. The orchestra taught me that precision is a form of respect.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1c-stem" style="padding: 88px 80px 0;">
+          <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 60px;">
+            <div>
+              <div style="font-size: 82px; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; color: #e6e6e6;">02</div>
+              <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 18px;">Engineering<br>&amp; Mathematics</div>
+            </div>
+            <div style="border-top: 2px solid #0a0a0a;">
+
+              <div style="padding: 32px 0; border-bottom: 1px solid #dcdcdc; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Fayston Engineering Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Weekly build sessions where a written prompt has to become a working prototype. Sketch, cut, fail, measure why it failed, cut again. Placed 2nd at the Fayston Engineering Competition against teams from across the school.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Dec 2025 &ndash; present</div>
+                  <div>1 hr / week</div>
+                  <div style="color: #d63a1e;">2nd place</div>
+                </div>
+              </div>
+
+              <div style="padding: 32px 0; border-bottom: 1px solid #dcdcdc; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Mathematics Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">A small group that met to work through problems none of us could finish alone. The skill it built was not speed. It was sitting with a problem far longer than is comfortable, which turned into two 2nd place finishes at the Fayston Math Competition.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Mar 2024 &ndash; Jun 2025</div>
+                  <div>1 hr / week</div>
+                  <div style="color: #d63a1e;">2nd place &times; 2</div>
+                </div>
+              </div>
+
+              <div style="padding: 32px 0; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Astronomy Club</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Observation nights, and the long arithmetic behind them. Orbital mechanics is mechanical engineering at a scale you are never allowed to touch, which makes the modelling the only instrument you have.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Dec 2025 &ndash; present</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="1c-life" style="padding: 88px 80px 0;">
+          <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 60px;">
+            <div>
+              <div style="font-size: 82px; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; color: #e6e6e6;">03</div>
+              <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 18px;">Athletics,<br>Music<br>&amp; Service</div>
+            </div>
+            <div style="border-top: 2px solid #0a0a0a;">
+
+              <div style="padding: 32px 0; border-bottom: 1px solid #dcdcdc; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Basketball, Varsity and JV</h3>
+                  <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Three hours a week, every week, for two years. I started on JV, was named captain and then team MVP, and moved up to varsity, where we finished 2nd at the KISAC tournament.</p>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Captaincy was the part that changed me. Running a huddle for players who are tired and behind on the scoreboard is a different skill from being good at basketball, and it is the one I use most on a build team.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Oct 2024 &ndash; present</div>
+                  <div>3 hr / week</div>
+                  <div style="color: #d63a1e;">KISAC 2nd place</div>
+                  <div style="color: #d63a1e;">JV captain, JV MVP</div>
+                </div>
+              </div>
+
+              <div style="padding: 32px 0; border-bottom: 1px solid #dcdcdc; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Fayston Symphony Orchestra</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">A full season of rehearsal ending in concert performance. An orchestra is the clearest system I have ever been part of: eighty people, one tempo, no room for a private interpretation.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Aug 2025 &ndash; Jun 2026</div>
+                  <div>Concert season</div>
+                </div>
+              </div>
+
+              <div style="padding: 32px 0; border-bottom: 1px solid #dcdcdc; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Church Orchestra</h3>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Playing for the congregation every Sunday. No audition, no ranking, no award at the end of it. It is the commitment on this page that nobody is keeping score of, which is why it matters to me.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Feb 2026 &ndash; present</div>
+                  <div>1 hr / week</div>
+                </div>
+              </div>
+
+              <div style="padding: 32px 0; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 44px;">
+                <div>
+                  <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 500; letter-spacing: -0.028em;">Hiking Heroes</h3>
+                  <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">Two hours a week for fifteen months, mostly cleaning the campus and its surrounding trails. Unglamorous, repetitive, and the reason the phrase "someone should fix that" stopped sounding acceptable to me.</p>
+                  <p style="margin: 0; font-size: 17px; line-height: 1.58; color: #333333; max-width: 58ch; text-wrap: pretty;">The group also took part in a forum on climate change and Silhak, the Korean tradition of practical learning, which holds that knowledge is worth only what it changes. That is the closest thing I have found to a description of why I want to be an engineer.</p>
+                </div>
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 2.1; color: #6e6e6e; text-align: right;">
+                  <div>Mar 2024 &ndash; Jun 2025</div>
+                  <div>2 hr / week</div>
+                  <div>Climate &amp; Silhak forum</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="1c-honors" style="padding: 88px 80px 0;">
+          <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 60px;">
+            <div>
+              <div style="font-size: 82px; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; color: #e6e6e6;">04</div>
+              <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 18px;">Honors<br>&amp; Record</div>
+            </div>
+            <div>
+              <div style="border-top: 2px solid #0a0a0a; margin-bottom: 56px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">Student of the Month</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Fayston Preparatory</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">Fayston Math Competition, 2nd Place</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Awarded twice</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">Fayston Engineering Competition, 2nd Place</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Engineering Club</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">KISAC Tournament, 2nd Place</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Varsity Basketball</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">Junior Varsity MVP and Captain</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Basketball</div></div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid #dcdcdc;"><div style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em;">Course Excellence, Concert Band</div><div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6e6e6e;">Academic award</div></div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; border-top: 1px solid #0a0a0a; padding-top: 24px;">
+                <div>
+                  <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #d63a1e;">Grade 9 &middot; 2024.03&ndash;2025.06</div>
+                  <div style="margin-top: 16px; font-size: 15px; line-height: 1.66; color: #333333;">Hiking Heroes, service and campus cleanup<br>Mathematics Club<br>Basketball JV, captain and MVP</div>
+                </div>
+                <div>
+                  <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #d63a1e;">Grade 10 &middot; 2025.08&ndash;2026.06</div>
+                  <div style="margin-top: 16px; font-size: 15px; line-height: 1.66; color: #333333;">Varsity Basketball, KISAC 2nd place<br>Fayston Symphony Orchestra<br>Engineering Club, 2nd place<br>Astronomy Club<br>Church Orchestra, from Feb 2026<br>Math Competition, 2nd place &times; 2<br>Student of the Month</div>
+                </div>
+                <div>
+                  <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #d63a1e;">Grade 11 &middot; 2026.08&ndash;present</div>
+                  <div style="margin-top: 16px; font-size: 15px; line-height: 1.66; color: #333333;">Continuing: Varsity Basketball, Engineering Club, Astronomy Club, Church Orchestra</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 88px 80px 0;">
+          <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 60px;">
+            <div>
+              <div style="font-size: 82px; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; color: #e6e6e6;">05</div>
+              <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 18px;">Gallery</div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+              <div style="aspect-ratio: 4 / 5; background: #f2f2f2;"><image-slot id="c-g1" shape="rect" placeholder="Engineering build"></image-slot></div>
+              <div style="aspect-ratio: 4 / 5; background: #f2f2f2;"><image-slot id="c-g2" shape="rect" placeholder="Varsity game"></image-slot></div>
+              <div style="aspect-ratio: 4 / 5; background: #f2f2f2;"><image-slot id="c-g3" shape="rect" placeholder="Orchestra concert"></image-slot></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1c-contact" style="margin-top: 88px; padding: 72px 80px; background: #d63a1e; color: #ffffff; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: end;">
+          <div>
+            <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.72; margin-bottom: 20px;">Contact</div>
+            <div style="font-size: 46px; font-weight: 500; letter-spacing: -0.035em; line-height: 1.05;">daniel.park@example.com</div>
+            <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.72; margin-top: 20px;">Fayston Preparatory School, Suji Campus &middot; Class of 2028</div>
+          </div>
+          <a href="Daniel-Park-Resume.pdf" download style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; background: #ffffff; color: #d63a1e; padding: 18px 30px; white-space: nowrap;" style-hover="background: #0a0a0a; color: #ffffff;">Download resume &darr;</a>
+        </div>
+
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;show1d&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Directions&quot;},&quot;show1e&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Directions&quot;},&quot;show1a&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Directions&quot;},&quot;show1b&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Directions&quot;},&quot;show1c&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Directions&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      show1a: this.props.show1a ?? true,
+      show1b: this.props.show1b ?? true,
+      show1c: this.props.show1c ?? true,
+      show1d: this.props.show1d ?? true,
+      show1e: this.props.show1e ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
