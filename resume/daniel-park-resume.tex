@@ -1,0 +1,233 @@
+%-------------------------
+% Resume in Latex
+% Template author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Machine-readable/ATS output. These are pdfTeX primitives, so skip them under
+% XeTeX (which is what tectonic runs by default) where they are undefined.
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Daniel Park} \\ \vspace{3pt}
+    \small Fayston Preparatory School, Suji Campus $|$ Class of 2028 \\ \vspace{2pt}
+    \href{mailto:daniel.park@example.com}{\underline{daniel.park@example.com}} $|$
+    \href{https://wooyoungcode.github.io/danielpark/}{\underline{wooyoungcode.github.io/danielpark}}
+\end{center}
+
+%-----------ABOUT-----------
+\section{About}
+  \vspace{2pt}
+  \small{
+  I want to be a mechanical engineer who can also build with AI instead of handing that part
+  to somebody else. In a few years AI will sit inside almost every field, and I think the people
+  who move those fields forward will be the ones who know the field and know the tools well
+  enough to point them at a real problem. Mechanical engineering is the foundation I trust,
+  because loads, tolerances and materials do not care what you meant to do.
+  }
+  \vspace{4pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Fayston Preparatory School, Suji Campus}{Suji, South Korea}
+      {Grade 11, Class of 2028}{Mar. 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Planning to study mechanical engineering, with mathematics, physics and astronomy as the areas I spend the most time on outside class.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ENGINEERING AND MATH-----------
+\section{Engineering, Math and Science}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fayston Engineering Club}{Dec. 2025 -- Present}
+      {Member, about 1 hour per week}{2nd place, Fayston Engineering Competition}
+      \resumeItemListStart
+        \resumeItem{Weekly build sessions. We are handed a written prompt and have to turn it into something that actually works. Sketch, cut, test it, find out why it broke, cut again.}
+        \resumeItem{Placed 2nd at the Fayston Engineering Competition against teams from across the school.}
+        \resumeItem{The useful part was learning to change a design after it failed instead of defending the version I had already drawn.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mathematics Club}{Mar. 2024 -- Jun. 2025}
+      {Member, about 1 hour per week}{2nd place twice, Fayston Math Competition}
+      \resumeItemListStart
+        \resumeItem{A small group that met to work through problems none of us could finish alone.}
+        \resumeItem{What it built was patience rather than speed. Staying with one problem much longer than is comfortable is a skill, and it is the one that carried over into everything else here.}
+        \resumeItem{Took 2nd place twice at the Fayston Math Competition.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Astronomy Club}{Dec. 2025 -- Present}
+      {Member}{Observation and orbital mechanics}
+      \resumeItemListStart
+        \resumeItem{Observation nights, plus the long arithmetic that sits behind them.}
+        \resumeItem{Orbital mechanics is mechanical engineering at a scale nobody lets you touch, so the model you build is the only instrument you have. That is a good reason to get it right.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------ATHLETICS-----------
+\section{Athletics}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Basketball, Varsity and Junior Varsity}{Oct. 2024 -- Present}
+      {About 3 hours per week}{2nd place, KISAC Tournament}
+      \resumeItemListStart
+        \resumeItem{Started on junior varsity. Named captain, then team MVP, then moved up to varsity. Two years so far, three hours a week, without a season off.}
+        \resumeItem{The varsity team finished 2nd at the KISAC tournament.}
+        \resumeItem{Being captain is the part that changed me. Running a huddle for players who are tired and behind on the scoreboard is a different job from being good at basketball, and it is the skill I use most when I am on a build team.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------MUSIC-----------
+\section{Music}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fayston Symphony Orchestra}{Aug. 2025 -- Jun. 2026}
+      {Full concert season}{Rehearsal through performance}
+      \resumeItemListStart
+        \resumeItem{A full season of rehearsal ending in concert performance.}
+        \resumeItem{Eighty people, one tempo, and no room for a private interpretation. It is the clearest system I have been part of, and it taught me that being precise is a way of respecting everyone else in the room.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Church Orchestra}{Feb. 2026 -- Present}
+      {About 1 hour per week}{Every Sunday}
+      \resumeItemListStart
+        \resumeItem{Playing for the congregation every Sunday. No audition, no ranking, no award at the end of it.}
+        \resumeItem{It is the one commitment on this page that nobody is keeping score of, which is exactly why I keep doing it.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Concert Band}{Course Excellence award}
+      {School course}{Awarded for the year}
+      \resumeItemListStart
+        \resumeItem{Received the Course Excellence award for the year.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SERVICE-----------
+\section{Service}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hiking Heroes}{Mar. 2024 -- Jun. 2025}
+      {About 2 hours per week for fifteen months}{Campus and trail cleanup}
+      \resumeItemListStart
+        \resumeItem{Fifteen months of cleaning the campus and the trails around it. Repetitive, unglamorous work, and the reason the sentence \textit{someone should fix that} stopped sounding acceptable to me.}
+        \resumeItem{The group also took part in a forum on climate change and Silhak, the Korean tradition of practical learning, which holds that knowledge is worth what it changes. That is the closest thing I have found to a description of why I want to be an engineer.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------HONORS-----------
+\section{Honors and Awards}
+  \resumeItemListStart
+      \resumeItem{\textbf{Student of the Month}, Fayston Preparatory School}
+      \resumeItem{\textbf{Fayston Math Competition, 2nd Place}, awarded twice}
+      \resumeItem{\textbf{Fayston Engineering Competition, 2nd Place}, Engineering Club}
+      \resumeItem{\textbf{KISAC Tournament, 2nd Place}, Varsity Basketball}
+      \resumeItem{\textbf{Junior Varsity MVP and Captain}, Basketball}
+      \resumeItem{\textbf{Course Excellence, Concert Band}, academic award}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
