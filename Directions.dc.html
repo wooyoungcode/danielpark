@@ -16,6 +16,40 @@
   * { box-sizing: border-box; }
   a { color: #e9e6e0; text-decoration: none; }
   a:hover { color: #ffffff; }
+
+  /* Direction cards: below 841px the auto-fit track list resolves to a single
+     explicit column, but `grid-column: span 2` on the text block manufactures a
+     phantom second track. Inline styles cannot be made width-conditional, so the
+     span is neutralised here. No-op at >= 841px. */
+  @media (max-width: 840px) {
+    #dir-a, #dir-b, #dir-c, #dir-d, #dir-e {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    #dir-a > div:first-child, #dir-b > div:first-child, #dir-c > div:first-child,
+    #dir-d > div:first-child, #dir-e > div:first-child {
+      max-width: none !important;
+    }
+    #dir-a > div:last-child, #dir-b > div:last-child, #dir-c > div:last-child,
+    #dir-d > div:last-child, #dir-e > div:last-child {
+      grid-column: 1 / -1 !important;
+    }
+  }
+
+  /* Landscape phone / small tablet: keep the desktop composition (fixed preview
+     column + fluid text) rather than a very wide 128px band. */
+  @media (min-width: 700px) and (max-width: 840px) {
+    #dir-a, #dir-b, #dir-c, #dir-d, #dir-e {
+      grid-template-columns: 260px minmax(0, 1fr) !important;
+    }
+    #dir-a > div:first-child, #dir-b > div:first-child, #dir-c > div:first-child,
+    #dir-d > div:first-child, #dir-e > div:first-child {
+      max-width: 260px !important;
+    }
+    #dir-a > div:last-child, #dir-b > div:last-child, #dir-c > div:last-child,
+    #dir-d > div:last-child, #dir-e > div:last-child {
+      grid-column: 2 !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -24,7 +58,7 @@
 
   <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2e33; padding-bottom: 20px;">
     <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8f8a82;">Daniel Park &middot; Personal site</div>
-    <a href="Daniel%20Park%20Portfolio.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8f8a82;" style-hover="color: #ffffff; text-decoration: underline;">See all five side by side &rarr;</a>
+    <a href="Daniel%20Park%20Portfolio.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8f8a82; padding: 14px 0; margin: -14px 0;" style-hover="color: #ffffff; text-decoration: underline;">See all five side by side &rarr;</a>
   </div>
 
   <h1 style="margin: clamp(36px, 6vw, 72px) 0 0; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.04; font-weight: 600; letter-spacing: -0.035em; max-width: 20ch; text-wrap: pretty;">Five directions, five working sites.</h1>
@@ -32,7 +66,7 @@
 
   <div style="display: flex; flex-direction: column; gap: 18px; margin-top: clamp(40px, 5vw, 64px);">
 
-    <a href="Site-A-Editorial-Record.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+    <a href="Site-A-Editorial-Record.dc.html" id="dir-a" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
       <div style="max-width: 260px;">
         <div style="height: 128px; background: #f7f5f0; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
           <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 27px; color: #1a1a18; letter-spacing: -0.02em;">Daniel Park</div>
@@ -46,7 +80,7 @@
           <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Editorial Record</span>
         </div>
         <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Serif type on warm paper, sections numbered 01 to 08, hairline rules, every date in a right-hand column. Reads like a printed academic dossier rather than a website.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 11.6px - 0.16vw, 11px); letter-spacing: 0.1em; text-transform: uppercase;">
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most serious</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Print feel</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Quietest</span>
@@ -57,11 +91,11 @@
       </div>
     </a>
 
-    <a href="Site-B-Instrument-Panel.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+    <a href="Site-B-Instrument-Panel.dc.html" id="dir-b" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
       <div style="max-width: 260px;">
         <div style="height: 128px; background: #14171a; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
           <div style="font-size: 26px; font-weight: 600; color: #e8eaec; letter-spacing: -0.035em;">Daniel Park</div>
-          <div style="display: flex; gap: 7px; margin-top: 11px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px;">
             <span style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #e8a33d; color: #e8a33d; padding: 4px 7px;">2nd place</span>
             <span style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #3a3f45; color: #9aa3ac; padding: 4px 7px;">1 hr / week</span>
           </div>
@@ -73,7 +107,7 @@
           <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Instrument Panel</span>
         </div>
         <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Dark charcoal, bordered modules, monospace labels, and a spec row under the name. Amber marks every award. Looks like something an engineer built for himself.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 11.6px - 0.16vw, 11px); letter-spacing: 0.1em; text-transform: uppercase;">
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most on-message</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Dense</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Dark</span>
@@ -84,7 +118,7 @@
       </div>
     </a>
 
-    <a href="Site-C-Swiss-Grid.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+    <a href="Site-C-Swiss-Grid.dc.html" id="dir-c" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
       <div style="max-width: 260px;">
         <div style="height: 128px; background: #ffffff; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; border: 1px solid #2c2e33;">
           <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 700; color: #0a0a0a; letter-spacing: -0.055em; line-height: 0.9;">Daniel<br>Park</div>
@@ -97,7 +131,7 @@
           <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Swiss Grid</span>
         </div>
         <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Helvetica at enormous scale, deep whitespace, one vermillion accent, and a full-width photo band under the name. The most contemporary and the most confident.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 11.6px - 0.16vw, 11px); letter-spacing: 0.1em; text-transform: uppercase;">
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most memorable</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Bold</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Photo-dependent</span>
@@ -108,7 +142,7 @@
       </div>
     </a>
 
-    <a href="Site-D-Academic-Homepage.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+    <a href="Site-D-Academic-Homepage.dc.html" id="dir-d" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
       <div style="max-width: 260px;">
         <div style="height: 128px; background: #f6f7f9; display: flex; gap: 12px; align-items: center; padding: 0 18px; border: 1px solid #2c2e33;">
           <div style="width: 44px; height: 44px; border-radius: 8px; background: #dfe3ea; flex: none;"></div>
@@ -127,7 +161,7 @@
           <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Academic Homepage</span>
         </div>
         <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">Light cards, a sidebar portrait with focus-area chips and Email and Resume buttons, and a dated News feed where each award reads as an announcement. The convention scholars and admissions readers already know how to scan.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 11.6px - 0.16vw, 11px); letter-spacing: 0.1em; text-transform: uppercase;">
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Easiest to scan</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Familiar</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Grows well</span>
@@ -138,7 +172,7 @@
       </div>
     </a>
 
-    <a href="Site-E-Research-Lab.dc.html" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
+    <a href="Site-E-Research-Lab.dc.html" id="dir-e" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: center; background: #191a1e; border: 1px solid #2c2e33; padding: clamp(20px, 2.6vw, 30px); color: #e9e6e0;" style-hover="border-color: #55575e; background: #1d1e23;">
       <div style="max-width: 260px;">
         <div style="height: 128px; background: #101317; position: relative; overflow: hidden; border: 1px solid #2c2e33;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #2a3138 0%, #101317 100%);"></div>
@@ -154,7 +188,7 @@
           <span style="font-size: 23px; font-weight: 600; letter-spacing: -0.02em;">Research Lab</span>
         </div>
         <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.62; color: #a8a49d; text-wrap: pretty;">A full-bleed hero photograph, lowercase voice, three key-area cards, then a selected-record feed with thumbnails and dates. It frames him as a practice with a direction rather than a list of activities.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 11.6px - 0.16vw, 11px); letter-spacing: 0.1em; text-transform: uppercase;">
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Most ambitious</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Image-led</span>
           <span style="border: 1px solid #3a3c42; color: #8f8a82; padding: 5px 9px;">Third person</span>
